@@ -48,7 +48,7 @@ export function convertVideo(rawVideoName: string, processedVideoName: string) {
  * @returns A promise that resolves when the file has been downloaded.
  */
 export async function downloadRawVideo(fileName: string) {
-  await storage.bucket(rawVideoBucketName)
+  await storage.bucket(rawVideoBucketName) // await will block any code after this line
     .file(fileName)
     .download({
       destination: `${localRawVideoPath}/${fileName}`,
