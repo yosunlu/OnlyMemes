@@ -2,6 +2,7 @@
 
 import SignIn from "./signIn";
 import Link from "next/link";
+import Upload from "./upload";
 
 import styles from "./navbar.module.css";
 // import Upload from "./upload";
@@ -36,6 +37,9 @@ function NavBar() {
              src="/pngegg.png" alt="Logo"/>
           </span>
         </Link>
+        {
+          user && <Upload />
+        }
         <SignIn user={user} />
       </nav>
     );
