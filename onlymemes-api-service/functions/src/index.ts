@@ -9,7 +9,7 @@ import {onCall} from "firebase-functions/v2/https";
 initializeApp();
 // locally已經firebase login, 所以deploy的時候，已經有自己的credential
 const storage = new Storage();
-const rawVideoBucketName = "nc-yt-raw-videos";
+const rawVideoBucketName = "memes-only-raw-videos";
 const firestore = new Firestore();
 
 export const createUser = functions.auth.user().onCreate((user) => {

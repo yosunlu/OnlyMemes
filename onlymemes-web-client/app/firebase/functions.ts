@@ -8,10 +8,9 @@ export async function uploadVideo(file: File) {
   const response: any = await generateUploadUrlFunction({
     fileExtension: file.name.split('.').pop()
   });
-
+  console.log(response.data.url);
   // Upload the file to the signed URL
-  const uploadResult = await fetch(response?.data?.url, { 
-    // ?:  if response is undefined, don't continue the expression
+  const uploadResult = await fetch(response.data.url, { 
     method: 'PUT',
     body: file,
     headers: {

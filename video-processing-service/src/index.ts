@@ -1,4 +1,8 @@
 import express from 'express';
+import {
+  setVideo,
+  isVideoNew,
+} from './firestore';
 
 import { 
   uploadProcessedVideo,
@@ -33,6 +37,17 @@ app.post('/process-video', async (req, res) => {
 
   const inputFileName = data.name;
   const outputFileName = `processed-${inputFileName}`;
+  const videoId = inputFileName.split('.')[0];
+
+  if(!isVideoNew(videoId)){
+    return res.status(400).send('Bad Request: video already processing or processed');
+  } else {
+    setVideo(videoId, {
+      id: videoId,
+      uid: videoId.split('-')[0],
+      status: "processing"
+    });
+  }
 
   // Download the raw video from Cloud Storage
   await downloadRawVideo(inputFileName);
@@ -51,6 +66,13 @@ app.post('/process-video', async (req, res) => {
   // Upload the processed video to Cloud Storage
   await uploadProcessedVideo(outputFileName);
 
+  // change status of video after upload
+  setVideo(videoId, {
+    status: 'processed',
+    filename: outputFileName
+
+  })
+
   await Promise.all([
     deleteRawVideo(inputFileName),
     deleteProcessedVideo(outputFileName)
@@ -63,3 +85,4 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
