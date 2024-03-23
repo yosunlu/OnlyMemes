@@ -42,3 +42,6 @@ export function signOut() {
 export function onAuthStateChangedHelper(callback: (user: User | null) => void) {
   return onAuthStateChanged(auth, callback);
 }
+// (user: User | null) => void，這意味著整個箭頭函數接收一個名為user的參數
+// 這個參數可能是User類型或者null，並且這個函數不返回任何值（即，它的返回類型是void）。
+// 函數體內部可能會有像setUser(user)這樣的語句，用於執行某些操作（比如更新狀態），但這些操作不會有返回值。
