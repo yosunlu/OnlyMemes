@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "OnlyMemes",
@@ -17,15 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} container`}>
-        <div className=".nav-container">
+      <body className="container">
+        <div className="nav-container">
           <Navbar/> {/* This will naturally be at the top */}
         </div>
         <div className="triple-block">
           <div className="block">
             <h1 className="block-title">OnlyMemes</h1>
             <p className="block-subtitle">...and memes only.</p>
-            <img src=".icon.png" alt="Descriptive Text" />
+            <img src="icon.png" alt="Descriptive Text" />
           </div>
           <div className="block">Part 2</div>
           <div className="block">Part 3</div>

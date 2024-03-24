@@ -1,15 +1,5 @@
 
-.montserrat-regular {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* Regular weight */
-    font-style: normal;
-  }
-  
-  .montserrat-bold {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* Bold weight */
-    font-style: normal;
-  }
+
   
 .container {
     max-width: 1100px; /* Adjust this value according to your design preference */
@@ -19,7 +9,7 @@
 
 body {
     background-color: black; /* Light black (dark gray) */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Tauri', sans-serif;
 }
 
 .triple-block {
@@ -64,7 +54,7 @@ body {
     font-weight: bold; /* Make it stand out */
     color: White; /* Dark text color, adjust as needed */
     margin-bottom: 5px; /* Space between the title and subtitle */
-    font-family: "Montserrat", sans-serif;
+    font-family: "Tauri", sans-serif;
     font-weight: 700; /* Bold weight */
     font-style: normal;
   }
@@ -72,7 +62,7 @@ body {
 .block-subtitle {
     font-size: 18px; /* Standard or slightly smaller text */
     color: gray; /* Lighter text color for contrast, adjust as needed */
-    font-family: "Montserrat", sans-serif;
+    font-family: "Tauri", sans-serif;
     font-weight: 400; /* Bold weight */
     font-style: normal;
 }
