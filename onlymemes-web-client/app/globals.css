@@ -1,3 +1,9 @@
+.container {
+    max-width: 1000px; /* Adjust this value according to your design preference */
+    margin: 0 auto; /* Centers the container */
+    padding: 80px 20px; /* Adds some space around the content */
+  }
+
 body {
     background-color: black; /* Light black (dark gray) */
 }

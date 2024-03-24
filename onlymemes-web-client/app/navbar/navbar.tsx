@@ -35,7 +35,7 @@ function NavBar() {
           <span className={styles.logoContainer}>
             {/* Updated part */}
             <span className={styles.logoText}>
-              <span className={styles.brace}>{'{'}</span> OnlyMemes <span className={styles.brace}>{'}'}</span>
+              <span className={styles.brace}>{'{'}</span> M <span className={styles.brace}>{'}'}</span>
             </span>
             {/* End of updated part */}
           </span>

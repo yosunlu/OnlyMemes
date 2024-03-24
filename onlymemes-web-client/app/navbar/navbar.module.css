@@ -20,3 +20,9 @@
 .brace:hover {
   margin: 0 5px; /* Adjust on hover to make it "expand". Lower values than initial will appear to push outward. */
 }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 1em;
+}
