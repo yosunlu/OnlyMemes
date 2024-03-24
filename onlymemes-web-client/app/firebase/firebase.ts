@@ -2,6 +2,9 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, User } from "firebase/auth";
 import { GithubAuthProvider } from "firebase/auth/cordova";
+import { getFunctions } from 'firebase/functions';
+
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -14,10 +17,13 @@ const firebaseConfig = {
   appId: "1:121237360365:web:7ab42f4b1950e882a946e4"
 };
 
-// Initialize Firebase
+// Initialize Firebase; call this here so getVideos can be exported to functions
+// 原本 const functions = get functions(）會寫在這，但是firebase沒有被page.tsx render，所以app 沒有被initialize
+// 解法是在functions.ts(getVidoes被定義的地方)import functions, 在這裏export
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
+export const functions = getFunctions(); // get the getVideo function
 
 /**
  * Signs the user in with a Google popup.
