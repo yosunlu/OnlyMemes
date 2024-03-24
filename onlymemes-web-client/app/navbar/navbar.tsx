@@ -33,13 +33,14 @@ function NavBar() {
       <nav className={styles.nav}>
         <Link href="/">
           <span className={styles.logoContainer}>
-            <img className={styles.logo} width={100} height={110}
-             src="/pngegg.png" alt="Logo"/>
+            {/* Updated part */}
+            <span className={styles.logoText}>
+              <span className={styles.brace}>{'{'}</span> OnlyMemes <span className={styles.brace}>{'}'}</span>
+            </span>
+            {/* End of updated part */}
           </span>
         </Link>
-        {
-          user && <Upload />
-        }
+        {user && <Upload />}
         <SignIn user={user} />
       </nav>
     );

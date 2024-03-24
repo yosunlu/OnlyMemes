@@ -1,11 +1,22 @@
-.nav {
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    padding: 1em;
-  }
+.logoContainer {
+  cursor: pointer;
+  /* Ensure alignment or spacing is appropriate. */
+}
 
-  .logoContainer{
-    cursor: pointer;
-  }
+.logoText {
+  font-size: 24px; /* Adjust size if needed */
+  color: white; /* Sets the text color to white */
+  text-decoration: none; /* Removes underline from links */
+  display: inline-block; /* Allows the element to support width and height */
+}
 
+.brace {
+  display: inline-block;
+  transition: margin 0.2s ease-out; /* Smooth transition for the hover effect */
+  color: white; /* Ensures the braces are also white */
+  margin: 0 10px; /* Adjust initial margin as needed */
+}
+
+.brace:hover {
+  margin: 0 5px; /* Adjust on hover to make it "expand". Lower values than initial will appear to push outward. */
+}
