@@ -52,3 +52,21 @@ export const generateUploadUrl = onCall({maxInstances: 1}, async (request) => {
   });
   return {url, fileName};
 });
+
+const videoCollectionId = "videos";
+
+export interface Video {
+  id?: string,
+  uid?: string,
+  filename?: string,
+  status?: "processing" | "processed",
+  title?: string,
+  description?: string
+}
+
+// doesn't need authentication bc users not signed in should be able to see them
+export const getVideos = onCall({maxInstances: 1}, async () => {
+  const querySnapshot =
+    await firestore.collection(videoCollectionId).limit(10).get();
+  return querySnapshot.docs.map((doc) => doc.data());
+});
