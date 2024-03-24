@@ -18,9 +18,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} container`}>
-        <Navbar/>
+        <div className=".nav-container">
+          <Navbar/> {/* This will naturally be at the top */}
+        </div>
+        <div className="triple-block">
+          <div className="block">
+            <h1 className="block-title">OnlyMemes</h1>
+            <p className="block-subtitle">...and memes only.</p>
+            <img src=".icon.png" alt="Descriptive Text" />
+          </div>
+          <div className="block">Part 2</div>
+          <div className="block">Part 3</div>
+        </div>
         {children}
       </body>
     </html>
   );
 }
+

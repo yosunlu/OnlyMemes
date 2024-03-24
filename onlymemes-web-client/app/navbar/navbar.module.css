@@ -23,6 +23,6 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  padding: 1em;
+  padding: 1em 1em 1em 0; /* Removes padding from the left side */
 }
+

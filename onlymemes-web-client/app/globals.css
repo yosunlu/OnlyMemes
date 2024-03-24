@@ -1,9 +1,81 @@
+
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+  }
+  
+  .montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+  }
+  
 .container {
-    max-width: 1000px; /* Adjust this value according to your design preference */
+    max-width: 1100px; /* Adjust this value according to your design preference */
     margin: 0 auto; /* Centers the container */
-    padding: 80px 20px; /* Adds some space around the content */
+    padding: 70px 20px; /* Adds some space around the content */
   }
 
 body {
     background-color: black; /* Light black (dark gray) */
+    font-family: 'Roboto', sans-serif;
 }
+
+.triple-block {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8%;
+    padding-left: 10px;
+    padding-bottom: 40px;
+  }
+  
+.block {
+    flex: 1;  /* Each block will take equal width */
+    height: 300px;
+    padding: 0; /* Add some padding inside each block */
+    margin: 0 10px; /* Add some margin between blocks */
+    background-color: #f0f0f0; /* Just an example color to distinguish the blocks */
+    color: black; /* Text color */
+    text-align: center; /* Center the text horizontally */
+    /* font-family: 'Helvetica Neue', Arial, sans-serif; */
+    /* font-weight: bold; */
+    
+}
+
+/* If you want to remove the margin on the first and last block for a more symmetric look */
+.block:first-child {
+    margin-left: 0;
+    background-color: black;
+}
+
+.block:last-child {
+    margin-right: 0;
+}
+
+.block-title, .block-subtitle {
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes any padding */
+    text-align: left; /* Ensures text aligns to the left */
+  }
+
+.block-title {
+    font-size: 45px; /* Large text */
+    font-weight: bold; /* Make it stand out */
+    color: White; /* Dark text color, adjust as needed */
+    margin-bottom: 5px; /* Space between the title and subtitle */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+  }
+  
+.block-subtitle {
+    font-size: 18px; /* Standard or slightly smaller text */
+    color: gray; /* Lighter text color for contrast, adjust as needed */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400; /* Bold weight */
+    font-style: normal;
+}
+  
+
+  
