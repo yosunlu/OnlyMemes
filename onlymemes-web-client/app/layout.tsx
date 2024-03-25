@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./navbar/navbar";
+import Leaders from "./leader/leader";
 import { Nunito } from 'next/font/google'
+import IconWithMusic from "./IconWithMusic/iconwithmusic";
 
 
 export const metadata: Metadata = {
@@ -30,8 +32,10 @@ export default function RootLayout({
             <div className="block">
               <p className="block-title">OnlyMemes</p>
               <p className="block-subtitle">...and memes only. <br />
-              Sign in to share your memes collections, or give stars to any memes you like!</p>
-              <img src="Yao.png" className="cube-icon" />
+              Sign in to share your memes collections, or give stars to any memes you like!</p>              
+              {/* <img src="Yao.png" className="cube-icon" /> */}
+              <IconWithMusic/> 
+              {/* <p className="block-subtitle">click me for surprise</p> */}
               <div className="buttons-container">
                 <button className="dark-button">
                   15  <img src="user.png" className="user-icon" alt="User"/>
@@ -53,7 +57,11 @@ export default function RootLayout({
             </div>
               
             {/* <div className="block">Part 2</div> */}
-            <div className="block">Part 3</div>
+            <div className="block">
+              <div className="leader-container">
+                <Leaders/>
+              </div>
+            </div>
           </div>
           {children}
         </div>

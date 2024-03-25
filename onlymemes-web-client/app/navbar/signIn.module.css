@@ -1,16 +1,17 @@
 .signin {
-    display: inline-block;
-    border: 1px solid gray;
-    color: #065fd4;
-    padding: 10px 20px;
-    border-radius: 24px;
-    font-family: "Roboto","Arial",sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .signin:hover {
-    background-color: #bee0fd;
-    border: 1px solid transparent;
-  }
+  display: inline-block;
+  border: 1px solid gray; /* or change to black if you want the border black as well */
+  color: white; /* Text color changed to white */
+  background-color: black; /* Background color changed to black */
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signin:hover {
+  background-color: white; /* Background color changes to white on hover */
+  color: black; /* Text color changes to black on hover */
+  border: 1px solid transparent; /* Keeps the border transparent on hover */
+}
