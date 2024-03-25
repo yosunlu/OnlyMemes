@@ -1,6 +1,3 @@
-
-
-  
 .container {
     max-width: 1100px; /* Adjust this value according to your design preference */
     margin: 0 auto; /* Centers the container */
@@ -11,33 +8,33 @@ body {
     background-color: black; /* Light black (dark gray) */
 }
 
-.triple-block {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 8%;
-    padding-left: 10px;
-    padding-bottom: 40px;
-  }
-  
-.block {
-    flex: 1;  /* Each block will take equal width */
-    height: 300px;
-    padding: 0; /* Add some padding inside each block */
-    margin: 0 10px; /* Add some margin between blocks */
-    background-color: #f0f0f0; /* Just an example color to distinguish the blocks */
-    color: black; /* Text color */
-    text-align: center; /* Center the text horizontally */
-    
+.double-block {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8%;
+  padding-left: 10px;
+  padding-bottom: 120px;
 }
 
-/* If you want to remove the margin on the first and last block for a more symmetric look */
-.block:first-child {
-    margin-left: 0;
-    background-color: black;
+.block {
+  flex: 1;  /* Each block will take equal width */
+  height: 300px;
+  padding: 0;
+  margin: 0 10px; /* Add some margin between blocks */
+  background-color: #f0f0f0;
+  color: black;
+  text-align: center;
 }
+
+.block:first-child {
+  margin-left: 0;
+  background-color: black;
+}
+
 
 .block:last-child {
-    margin-right: 0;
+  margin-left: 100px;
+  margin-right: 0;
 }
 
 .block-title, .block-subtitle {
@@ -48,7 +45,7 @@ body {
 
 .block-title {
     font-size: 45px; /* Large text */
-    font-weight: 500; /* Make it stand out */
+    font-weight: 600; /* Make it stand out */
     color: White; /* Dark text color, adjust as needed */
     margin-bottom: 5px; /* Space between the title and subtitle */
   }
@@ -66,17 +63,29 @@ body {
     height: auto; /* Maintain the aspect ratio */
   }
 
+.buttons-container {
+    display: flex;
+    justify-content: 10px; /* Adjusts the space between the buttons */
+    align-items: center; /* Aligns buttons vertically in the center */
+    padding-bottom: 30px;
+ }
+
 .dark-button {
-    display: block;
+    display: inline-flex; /* Enables flexbox layout */
+    width: 80px;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
     padding: 10px 10px; /* Top and bottom padding | Left and right padding */
     background-color: black; /* Background color */
     border: 1px solid #333; /* Dark gray border, adjust color as needed */
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 20px; /* Rounded corners */
     color: white; /* Text color */
     text-decoration: none; /* Removes underline from text if using an <a> element */
     font-size: 15px; /* Text size */
     cursor: pointer; /* Changes the cursor to a pointer on hover */
     transition: background-color 0.3s; /* Smooth transition for hover effect, optional */
+    margin-right: 20px; 
+    
     
 }
   
@@ -86,11 +95,54 @@ body {
 }
 
 .user-icon{
-    width: 17px; /* Set the desired width */
+    width: 20px; /* Set the desired width */
     height: auto; /* Maintain the aspect ratio */
     margin-left: 5px; /* Adds some space between the text and the icon */
+    padding-left: 5px;
     
 }
-  
 
-  
+.intro-container{
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding: 0;
+  width: 400;
+}
+
+.me-icon{
+  width: 75px; /* Set the desired width */
+  margin: 0;
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.me-intro{
+  color: white;
+  font-size: 18px;
+  margin: 0; /* Removes default margins */
+  padding: 0; /* Ensures no padding is between sentences */
+}
+
+.highlight {
+  color: green; /* Replace #YOUR_COLOR with the actual color code you want */
+}
+
+.me-intro:last-child {
+  color: gray;
+}
+
+.intro-container div {
+  display: flex; /* This makes the container a flexbox container */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: flex-start; /* Aligns children to the start (left side) */
+  margin-left: 10px; /* Adjust as needed, ensures alignment with the icon */
+  padding: 0; /* Removes any default padding */
+}
+
+.leadership-board {
+  border: 1px solid gray; /* Gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  color: white; /* Text color inside the box */
+  text-align: center; /* Center the text horizontally */
+}

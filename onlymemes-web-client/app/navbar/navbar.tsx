@@ -5,7 +5,6 @@ import Link from "next/link";
 import Upload from "./upload";
 
 import styles from "./navbar.module.css";
-// import Upload from "./upload";
 import { useEffect, useState } from "react";
 import { onAuthStateChangedHelper } from "../firebase/firebase";
 import { User } from "firebase/auth";

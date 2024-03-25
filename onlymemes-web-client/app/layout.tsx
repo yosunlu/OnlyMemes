@@ -26,17 +26,33 @@ export default function RootLayout({
           <div className="nav-container">
             <Navbar/> {/* This will naturally be at the top */}
           </div>
-          <div className="triple-block">
+          <div className="double-block">
             <div className="block">
               <p className="block-title">OnlyMemes</p>
               <p className="block-subtitle">...and memes only. <br />
-              Sign in to share your memes collections!</p>
+              Sign in to share your memes collections, or give stars to any memes you like!</p>
               <img src="Yao.png" className="cube-icon" />
-              <button className="dark-button">
-                  15  <img src="user.png" className="user-icon" />
-              </button>
+              <div className="buttons-container">
+                <button className="dark-button">
+                  15  <img src="user.png" className="user-icon" alt="User"/>
+                </button>
+                <button className="dark-button">
+                  30  <img src="yt.png" className="user-icon" alt="User"/>
+                </button>
+                <button className="dark-button">
+                  60  <img src="star.png" className="user-icon" alt="User"/>
+                </button>
+              </div>
+              <div className="intro-container">
+                <img src="my-image.png" className="me-icon" alt="User"/>
+                <div>
+                  <p className="me-intro">Created by <span className="highlight">Yosun</span></p>
+                  <p className="me-intro" color="gray">last updated: Mar 24, 2024</p>
+                </div>
+              </div>
             </div>
-            <div className="block">Part 2</div>
+              
+            {/* <div className="block">Part 2</div> */}
             <div className="block">Part 3</div>
           </div>
           {children}
