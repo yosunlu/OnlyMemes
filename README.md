@@ -1,5 +1,5 @@
-# work in progress
-# this is NOT some random youtube clone projects on youtube!
+- work in progress
+- this is NOT some random youtube clone projects on youtube!
 
 ## Tech Stack
 ### Video Storage (Cloud Storage)
