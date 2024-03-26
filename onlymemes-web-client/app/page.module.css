@@ -1,4 +1,43 @@
-.thumbnail {
-    margin: 10px;
-  }
+.container{
+  display: flex;
+  border-radius: 20px; /* Rounded corners */
+  justify-content: flex-start; 
+   /* Padding inside the box */
+  padding-top: 10px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.container > :first-child {
+  margin-left: 0; /* Remove left margin for the first item */
+}
+
+.container > :last-child {
+  margin-right: 0; /* Remove right margin for the last item */
+}
+.top_line{
+  /* margin-top: 10; */
+  border: 2px solid white; 
+  height: 0px;
+  width: 1000px;
+}
+
+.line{
+  /* margin-top: 10; */
+  border: 0.2px solid gray; 
+  width: 1000px;
+}
+.userID{
+  margin-top: 15px;
+  margin-bottom: 0px;
+  color: gray;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.thumbnail {    
+  /* margin-top: 5px; */
+  margin-right: 25px;
+  border-radius: 5px;
+}
 

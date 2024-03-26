@@ -1,8 +1,8 @@
 .leaderContainer{
-    border: 1.5px solid gray; /* Gray border */
+    border: 1.5px solid gray; 
     width: 40%;
-    height: 100;
-    border-radius: 8px; /* Rounded corners */
+    height: 100%;
+    border-radius: 20px; /* Rounded corners */
     padding: 20px; /* Padding inside the box */
     padding-top: 15px;
     padding-left: 35px;
