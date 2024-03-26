@@ -6,33 +6,31 @@
   padding-top: 10px;
   margin-bottom: 20px;
   margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 5px;
 }
 
-.container > :first-child {
-  margin-left: 0; /* Remove left margin for the first item */
-}
 
-.container > :last-child {
-  margin-right: 0; /* Remove right margin for the last item */
-}
 .top_line{
-  /* margin-top: 10; */
+  margin-left: 6px;
   border: 3px solid white; 
   height: 0px;
-  width: 1000px;
+  width: 995px;
 }
 
 .line{
   /* margin-top: 10; */
   border: 0.2px solid gray; 
   width: 1000px;
+  margin-left: 8px;
 }
 .userID{
+  margin-left: 8px;
   margin-top: 15px;
   margin-bottom: 0px;
-  color: gray;
-  font-size: 20px;
-  font-weight: 500;
+  color: white;
+  font-size: 25px;
+  font-weight: 550;
 }
 
 .thumbnail {    
