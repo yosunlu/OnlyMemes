@@ -1,5 +1,4 @@
-
-- this is NOT some random youtube clone projects on youtube!
+This is NOT some random youtube clone projects on youtube!
 
 ## Tech Stack
 ### Video Storage (Cloud Storage)
