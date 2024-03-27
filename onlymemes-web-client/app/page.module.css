@@ -6,26 +6,26 @@
   padding-top: 10px;
   margin-bottom: 20px;
   margin-top: 5px;
-  margin-left: 8px;
+  margin-left: 10px;
   margin-right: 5px;
 }
 
 
 .top_line{
-  margin-left: 6px;
+  margin-left: 10px;
   border: 3px solid white; 
   height: 0px;
-  width: 995px;
+  width: 992px;
 }
 
 .line{
   /* margin-top: 10; */
   border: 0.2px solid gray; 
   width: 1000px;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 .userID{
-  margin-left: 8px;
+  margin-left: 10px;
   margin-top: 15px;
   margin-bottom: 0px;
   color: white;

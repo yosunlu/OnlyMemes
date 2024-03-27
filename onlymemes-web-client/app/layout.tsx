@@ -4,7 +4,8 @@ import Navbar from "./navbar/navbar";
 import Leaders from "./leader/leader";
 import { Nunito } from 'next/font/google'
 import IconWithMusic from "./IconWithMusic/iconwithmusic";
-
+import Image from "next/image";
+import { Suspense } from "react";
 
 
 export const metadata: Metadata = {
@@ -41,17 +42,17 @@ export default function RootLayout({
               {/* <p className="block-subtitle">click me for surprise</p> */}
               <div className="buttons-container">
                 <button className="dark-button">
-                  15  <img src="user.png" className="user-icon" alt="User"/>
+                  15  <Image src="/user.png" className="user-icon" alt="User" width={45} height={45}/>
                 </button>
                 <button className="dark-button">
-                  30  <img src="yt.png" className="user-icon" alt="User"/>
+                  30  <Image src="/yt.png" className="user-icon" alt="User" width={45} height={45} />
                 </button>
                 <button className="dark-button">
-                  60  <img src="star.png" className="user-icon" alt="User"/>
+                  60  <Image src="/star.png" className="user-icon" alt="User" width={45} height={45}/>
                 </button>
               </div>
               <div className="intro-container">
-                <img src="my-image.png" className="me-icon" alt="User"/>
+                <Image src="/my-image.png" className="me-icon" alt="User" width={100} height={100}/>
                 <div>
                   <p className="me-intro">Created by <span className="highlight">Yosun</span></p>
                   <p className="me-intro" color="gray">last updated: Mar 24, 2024</p>
@@ -65,7 +66,9 @@ export default function RootLayout({
             </div>
           </div>
           {/* <Home/> */}
-          {children}
+          <Suspense> 
+            {children}
+          </Suspense> 
         </div>
       </body>
     </html>

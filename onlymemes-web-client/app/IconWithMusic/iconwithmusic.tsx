@@ -1,5 +1,6 @@
 'use client'
 import React, { useRef } from 'react';
+import Image from "next/image";
 
 function IconWithMusic() {
   // Specify the type of the ref as HTMLAudioElement or null
@@ -20,12 +21,14 @@ function IconWithMusic() {
 
   return (
     <div>
-      <img
-        src="Yao.png"
+      <Image
+        src="/Yao.png"
         className="cube-icon"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         alt="Icon"
+        width={30}
+        height={60}
       />
       
       <audio ref={audioRef} src="RR.mp3" />

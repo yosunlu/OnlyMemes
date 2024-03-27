@@ -1,0 +1,11 @@
+{
+    "hosting": {
+      "rewrites": [{
+        "source": "**",
+        "run": {
+          "serviceId": "onlymemes-web-client",
+          "region": "us-central1"
+        }
+      }]
+    }
+  }

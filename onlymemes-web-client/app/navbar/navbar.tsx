@@ -41,6 +41,7 @@ function NavBar() {
         </Link>
         {user && <Upload />}
         <SignIn user={user} />
+        
       </nav>
     );
   }

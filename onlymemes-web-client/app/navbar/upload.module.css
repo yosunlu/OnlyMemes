@@ -9,7 +9,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%; /* Make it circular */
-    color: black; /* Color of the text */
+    color: white; /* Color of the text */
     border: none;
     cursor: pointer;
     font-size: 10px;
@@ -17,6 +17,6 @@
   }
   
   .uploadButton:hover {
-    background-color: rgb(230, 230, 230);
+    background-color: black;
   }
   

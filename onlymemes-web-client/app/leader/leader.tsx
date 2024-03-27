@@ -1,29 +1,30 @@
 'use client';
 import styles from "./leader.module.css";
+import Image from "next/image";
 
 function Leaders() {
     return (
         <nav className={styles.leaderContainer}>
             <h2>Current Leaders</h2> {/* Larger text for the title */}
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
-            <img src="star.png"/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            <Image src="/star.png" alt="star" width={10} height={10}/>
+            
             
             <ul>
                 <li><span className="name">yushanlu</span>   <span className="number">20</span></li>
