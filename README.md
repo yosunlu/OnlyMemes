@@ -24,16 +24,18 @@ There are several functions under construction (listed below), but at current st
 
   ![List](screenshots/list.png)
 
-This is NOT some random youtube clone projects on youtube!
+
 
 ## Technologies used
-👽 Frontend: React.js  
+Just to clarify, this is NOT some random youtube clone projects on youtube that uses Youtube APIs! (that was mouthfull)  
+I (kind of) built my own server, and dealt with uploading and watching the videos myself. 
+👽 Frontend: React.js, Next.js
 👽 Backend: Node.js Express.js  
 👽 Database & Authentication: Firebase, including Firestore, Functions, Authentication
 👽 Cloud Services: Google Cloud Platform, including Cloud Run, Bucket (Cloud Storage), Pub/Sub
 
 
-
+### 
 
 ### Video Storage (Cloud Storage)
 Google Cloud Storage will be used to host the raw and processed videos. This is a simple, scalable, and cost effective solution for storing and serving large files.
