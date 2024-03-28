@@ -7,15 +7,21 @@ There are several functions under construction (listed below), but at current st
 
 ## Visuals
 👽 Users can sign by clicking the sign-in button  
-👽 *Current Leaders board disaplys the leaders and their stars.  
+👽 *Current Leaders board disaplays the leaders and their stars.  
 👽 Be sure to hover over the Yao Ming icon.
+
+
 ![Home](screenshots/home.png)
 
 👽 After signing in, the upload button will appear
+
+
 ![Sign-in](screenshots/sign_in.png)
 
 👽 Videos will be dislpayed in the order of total stars  
 👽 Thumbnails are the same to prevent spoilers
+
+
   ![List](screenshots/list.png)
 
 This is NOT some random youtube clone projects on youtube!
