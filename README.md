@@ -26,7 +26,16 @@ There are several functions under construction (listed below), but at current st
 
 This is NOT some random youtube clone projects on youtube!
 
-## Tech Stack
+## Technologies used
+👽 Frontend: React.js  
+👽 Backend: Node.js Express.js
+👽Database & Authentication: 
+👽 Database & Authentication: Firebase, including Firestore, Functions, Authentication
+
+
+### Cloud Services (Google Cloud Platform)
+- **Cloud Run**: A managed platform that enables you to run stateless containers that are invocable via HTTP requests. Cloud Run is serverless: it abstracts away all infrastructure management, so you can focus on what matters most — building great applications.
+- **Bucket (Cloud Storage)**: A scalable and secure object storage service for storing and serving user-generated content, archives, data lakes, and more.
 ### Video Storage (Cloud Storage)
 Google Cloud Storage will be used to host the raw and processed videos. This is a simple, scalable, and cost effective solution for storing and serving large files.
 
