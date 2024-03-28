@@ -3,7 +3,7 @@
 
 As a meme enthusiast, I love to share memes with others, but quite often I get ignored (已讀), or even worse, they don't appreciate my sense of humor. To show that my sense of humor surpasses that of all my friends, I created this website, which allows user to sign in with google account and upload their favorite memes in the form of video. Usere can give stars to the memes they like, and the website will show the current leaders, and display users' memes in the order of total stars acquired.
 
-There are several functions under construction (listed below), but at current state users are welcomed to sign in and upload videos.
+There are several functions under construction (listed below), but at current state users are welcomed to sign in and upload videos: onlememes.web.app
 
 ## Visuals
 👽 Users can sign by clicking the sign-in button  
@@ -67,6 +67,9 @@ I (kind of) built my own server, and dealt with uploading and watching the video
 
 **Authenticaion**
 - Use Firebase Auth to handle user authentication, making it easier integrate with Google Sign In.
+
+**Deployment**
+- I've used Firebase Hosting for the frontend domain. It is quite easy to integrate with GCP projects. Documentations can be found here: https://cloud.google.com/run/docs/mapping-custom-domains#https-load-balancer
 
 ## To-dos
 
