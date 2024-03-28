@@ -70,7 +70,7 @@ I (kind of) built my own server, and dealt with uploading and watching the video
 
 ## To-dos
 
-The main focus of the project is to create a video-processing service and architecture similar to that of Youtube. There are still many functions that will be added in the future:
+The main focus of the project has been to create a video-processing service and architecture similar to that of Youtube. There are still many functions that will be added in the future:
 
 
 👽 Each user has a row with their own videos  
