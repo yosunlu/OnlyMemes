@@ -1,7 +1,7 @@
 # OnlyMemes
 ## Introduction
 
-As a meme enthusiast, I love to share memes with others, but quite often I get ignored (已讀), or even worse, they don't appreciate my sense of humor. To show that my sense of humor surpasses that of all my friends, I created this website, which allows user to sign in with google account and upload their favorite memes in the form of video. Usere can give stars to the memes they like, and the website will show the current leaders, and display users' memes in the order of total stars acquired.
+As a meme enthusiast, I love to share memes with others, but quite often I get ignored (已讀), or even worse, they don't appreciate my sense of humor. To show that my sense of humor surpasses that of all my friends, I created this website, which allows user to sign in with google account and upload their favorite memes in the form of video. User can give stars to the memes they like, and the website will show the current leaders, and display users' memes in the order of total stars acquired.
 
 There are several functions under construction (listed below), but at current state users are free to sign in and upload videos: [onlememes.web.app](https://onlememes.web.app/)
 
