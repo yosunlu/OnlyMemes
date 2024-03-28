@@ -27,12 +27,12 @@ There are several functions under construction (listed below), but at current st
 
 
 ## Technologies used
-Just to clarify, this is NOT some random youtube clone projects on youtube that uses Youtube APIs! (that was mouthfull)  
-I (kind of) built my own server, and dealt with uploading and watching the videos myself. 
-👽 Frontend: React.js, Next.js
+Just to clarify, this is NOT some random youtube clone projects on youtube that uses Youtube APIs! (that was mouthfull)    
+I (kind of) built my own server, and dealt with uploading and watching the videos myself.  
+👽 Frontend: React.js, Next.js  
 👽 Backend: Node.js Express.js  
-👽 Database & Authentication: Firebase, including Firestore, Functions, Authentication
-👽 Cloud Services: Google Cloud Platform, including Cloud Run, Bucket (Cloud Storage), Pub/Sub
+👽 Database & Authentication: Firebase, including Firestore, Functions, Authentication  
+👽 Cloud Services: Google Cloud Platform, including Cloud Run, Bucket (Cloud Storage), Pub/Sub  
 
 
 ### 
