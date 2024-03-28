@@ -77,7 +77,7 @@ The main focus of the project has been to create a video-processing service and 
 
 
 👽 Each user has a row with their own videos  
-👽 Star cout for each video  
+👽 Star count for each video  
 👽 Total star counts, and ddjust leadership board/display of videos accordingly  
 👽 Each user can star 10 videos a day  
 👽 User can add topic for the videos they upload  
