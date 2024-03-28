@@ -66,7 +66,7 @@ I (kind of) built my own server, and dealt with uploading and watching the video
 
 
 **Authenticaion**
-- I use Firebase Auth to handle user authentication, making it easier integrate with Google Sign In
+- I use Firebase Auth to handle user authentication, making it easier to integrate with Google Sign In
 
 **Deployment**
 - I use Firebase Hosting for the frontend domain. It is quite easy to integrate with GCP projects. Documentations can be found here: https://cloud.google.com/run/docs/mapping-custom-domains#https-load-balancer
