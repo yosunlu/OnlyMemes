@@ -57,7 +57,7 @@ I (kind of) built my own server, and dealt with uploading and watching the video
   - generateUpdateUrl() returns a signed-URL; this signed-URL containes information (i.e. path) to upload the video
   - Once the video is uploaded to the raw bucket, Pub/Sub will be triggered
 - getVideos()
-  - this access Firestore's collection of videos, and returns an array of video data
+  - this accesses Firestore's collection of videos, and returns an array of video data
   - like generateUpdateUrl(), this function is wrapped and called by the frontend (/onlymemes-web-client/app/firebase/functions.ts)
 
 **Firestore**
