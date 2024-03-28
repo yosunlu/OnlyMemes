@@ -36,8 +36,14 @@ I (kind of) built my own server, and dealt with uploading and watching the video
 👽 Database & Authentication: Firebase, including Firestore, Functions, Authentication  
 👽 Cloud Services: Google Cloud Platform, including Cloud Run, Bucket (Cloud Storage), Pub/Sub  
 
-
-### 
+### Archetecture
+**Video processing**  
+- Video-processing service is containerized, image of which pushed to Google Artifacts, and running on Cloud Run  
+- There are two buckets on Google Buckets, raw and processed video
+- When a video is uploaded (will talk in detail below), it is being uploaded to the raw bucket
+- When the raw video is finalized, the following command will send a notification to the end point of the Video-processing service (video-processing service/index.ts)
+javascript
+(gsutil notification create -t video-uploads-topic -f json -e OBJECT_FINALIZE gs://memes-only-raw-videos) 
 
 ### Video Storage (Cloud Storage)
 Google Cloud Storage will be used to host the raw and processed videos. This is a simple, scalable, and cost effective solution for storing and serving large files.
