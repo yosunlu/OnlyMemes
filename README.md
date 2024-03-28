@@ -6,9 +6,9 @@ As a meme enthusiast, I love to share memes with others, but quite often I get i
 There are several functions under construction (listed below), but at current state users are free to sign in and upload videos: [onlememes.web.app](https://onlememes.web.app/)
 
 ## Visuals
-👽 Users can sign by clicking the sign-in button  
-👽 *Current Leaders board disaplays the leaders and their stars.  
-👽 Be sure to hover over the Yao Ming icon.
+👽 Users can sign in by clicking the sign-in button  
+👽 Current Leaders board disaplays the leaders and their stars
+👽 Be sure to hover over the Yao Ming icon
 
 
 ![Home](screenshots/home.png)
@@ -28,7 +28,7 @@ There are several functions under construction (listed below), but at current st
 
 ## Technologies used
 Just to clarify, this is NOT some random youtube clone projects on youtube that uses Youtube APIs! (that was mouthfull)    
-I (kind of) built my own server, and dealt with uploading and watching the videos myself.  
+I (kind of) built my own server, and dealt with uploading and watching the videos myself 
 
 
 👽 Frontend: React.js, Next.js  
