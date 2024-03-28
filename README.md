@@ -6,7 +6,7 @@ As a meme enthusiast, I love to share memes with others, but quite often I get i
 There are several functions under construction (listed below), but at current state users are free sign in and upload videos.
 
 ## Visuals
-![Home][screenshots/home.png]
+![Home](screenshots/home.png)
 
 
 This is NOT some random youtube clone projects on youtube!
