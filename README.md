@@ -38,7 +38,7 @@ I (kind of) built my own server, and dealt with uploading and watching the video
 
 ### Architecture
 **Video processing**  
-- Corresponding code can be found at /video-processing service
+- Corresponding code can be found at /video-processing-service
 - Video-processing service is containerized, image of which pushed to Google Artifacts, and running on Cloud Run  
 - There are two buckets on Google Buckets, raw and processed video
 - When a video is uploaded (will talk in detail below), it is being uploaded to the raw bucket
