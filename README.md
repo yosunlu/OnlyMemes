@@ -53,7 +53,6 @@ I (kind of) built my own server, and dealt with uploading and watching the video
 - Corresponding code can be found at /onlymemes-api-services
 - Both functions are written at /index.ts, and deployed at Firebase (which connects to Cloud Run) with: `firebase deploy --only functions:generateUploadUrl`
 - generateUpdateUrl()
-  - 
   - When a video is uploaded by the client, the frontend will call uploadVideo() (/onlymemes-web-client/app/firebase/functions.ts) and generateUpdateUrl(), and generate an authenticated URL (permission of access to the bucket for this function needs to be granted)
   - generateUpdateUrl() returns a signed-URL; this signed-URL containes information (i.e. path) to upload the video
   - Once the video is uploaded to the raw bucket, Pub/Sub will be triggered
