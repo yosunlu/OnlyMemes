@@ -36,41 +36,38 @@ I (kind of) built my own server, and dealt with uploading and watching the video
 👽 Database & Authentication: Firebase, including Firestore, Functions, Authentication  
 👽 Cloud Services: Google Cloud Platform, including Cloud Run, Bucket (Cloud Storage), Pub/Sub  
 
-### Archetecture
+### Architecture
 **Video processing**  
 - Corresponding code can be found at /video-processing service
 - Video-processing service is containerized, image of which pushed to Google Artifacts, and running on Cloud Run  
 - There are two buckets on Google Buckets, raw and processed video
 - When a video is uploaded (will talk in detail below), it is being uploaded to the raw bucket
-- When the video is "finalized" in the raw bucket, a notification will be created by Pub/Sub (/index.ts), set by the following CLI 
+- When the video is "finalized" in the raw bucket, a notification will be created by Pub/Sub (set by the following CLI)
 `gsutil notification create -t video-uploads-topic -f json -e OBJECT_FINALIZE gs://memes-only-raw-videos`
-- The notificaiton will be sent to Video-processing service hosted on Cloud Run; once the video is downloaded and processed (in my case, being converted to 360p, at /index.ts and /storage.ts ) locally , it will be uploaded to the processed-video bucket
+- The notificaiton will be sent to Video-processing service end point (can be seen as `/process-video` at /index.ts) hosted on Cloud Run; once the video is downloaded and processed (in my case, being converted to 360p, at /index.ts and /storage.ts ) locally , it will be uploaded to the processed-video bucket
+  - This adds durability layer for video upload events and process videos asynchronously 
+- The nature of video processing can lead to inconsistent workloads, so use Cloud Run to scale up and down as needed
+- Google Cloud Storage is simple, scalable, and cost effective solution for storing and serving large files
 
-**
 **APIs**
-- generateUpdateUrl(): this is deployed at Firebase (which connects to Cloud Run) with: `firebase deploy --only functions:generateUploadUrl`
-- When a video is uploaded, the frontend will call this function (/onlymemes-api/service/function.ts), and generate an authenticated URL (permission of access to the bucket for this function needs to be granted)
-- 
+- Corresponding code can be found at /onlymemes-api-services
+- Both functions are written at /index.ts, and deployed at Firebase (which connects to Cloud Run) with: `firebase deploy --only functions:generateUploadUrl`
+- generateUpdateUrl()
+  - 
+  - When a video is uploaded by the client, the frontend will call uploadVideo() (/onlymemes-web-client/app/firebase/functions.ts) and generateUpdateUrl(), and generate an authenticated URL (permission of access to the bucket for this function needs to be granted)
+  - generateUpdateUrl() returns a signed-URL; this signed-URL containes information (i.e. path) to upload the video
+  - Once the video is uploaded to the raw bucket, Pub/Sub will be triggered
+- getVideos()
+  - this access Firestore's collection of videos, and returns an array of video data
+  - like generateUpdateUrl(), this function is wrapped and called by the frontend (/onlymemes-web-client/app/firebase/functions.ts)
 
-### Video Storage (Cloud Storage)
-Google Cloud Storage will be used to host the raw and processed videos. This is a simple, scalable, and cost effective solution for storing and serving large files.
+**Firestore**
+- Firestore Database has two collections: users and videos; they are used to store metadata (email, filename, processed/processing, etc.)
+- setVideo() (/video-processing-service/src/index.ts) will change the status of the video after the user uploads it, and after video-proceesing-service finishes converting and upload it to the processed-bucket
 
-### Video Upload Events (Cloud Pub/Sub)
-When a video is uploaded, publish a message to a Cloud Pub/Sub topic. This will add durability layer for video upload events and process videos asynchronously.
 
-### Video Processing Workers (Cloud Run)
-When a video upload event is published, a video processing worker will receive a message from Pub/Sub and transcode the video. For transcoding the video we will use ffmpeg, which is a popular open source tool for video processing and it's widely used in industry (including at YouTube).
+**Authenticaion**
+- Use Firebase Auth to handle user authentication, making it easier integrate with Google Sign In.
 
-The nature of video processing can lead to inconsistent workloads, so use Cloud Run to scale up and down as needed. Processed videos will be uploaded back to Cloud Storage.
 
-### Video Metadata (Firestore)
-After a video is processed, store the metadata in Firestore. This will allow display of processed videos in the web client along with other relevant info (e.g. title, description, etc).
 
-### Video API (Firebase Functions)
-Use Firebase Functions to build a simple API that will allow users to upload videos and retrieve video metadata. This can easily be extended to support additional Create, Read, Update, Delete (CRUD) operations.
-
-### Web Client (Next.js / Cloud Run)
-Use Next.js to build a simple web client that will allow users to sign in and upload videos. The web client will be hosted on Cloud Run.
-
-### Authentication (Firebase Auth)
-Use Firebase Auth to handle user authentication. This will make it easier integrate with Google Sign In.
