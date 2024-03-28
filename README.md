@@ -6,8 +6,17 @@ As a meme enthusiast, I love to share memes with others, but quite often I get i
 There are several functions under construction (listed below), but at current state users are free sign in and upload videos.
 
 ## Visuals
+- Users can sign by clicking the sign-in button
+- **Current Leaders board disaplys the leaders and their stars
+- Be sure to hover over the Yao Ming icon
 ![Home](screenshots/home.png)
 
+- After signed in, the upload button will appear
+![Sign-in](screenshots/sign_in.png)
+
+- Videos will be dislpayed in the order of total stars
+- Thumbnails are the same to prevent spoilers
+  ![List](screenshots/list.png)
 
 This is NOT some random youtube clone projects on youtube!
 
