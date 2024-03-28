@@ -3,7 +3,7 @@
 
 As a meme enthusiast, I love to share memes with others, but quite often I get ignored (已讀), or even worse, they don't appreciate my sense of humor. Hence, I created this website, which allows user to sign in with google account and upload their favorite memes in the form of video. Usere can give stars to the memes they like, and the website will show the current leaders, and display users' memes in the order of total stars acquired.
 
-There are several functions under construction (listed below), but at current state users are free sign in and upload videos.
+There are several functions under construction (listed below), but at current state users are welcomed to sign in and upload videos.
 
 ## Visuals
 👽 Users can sign by clicking the sign-in button  
