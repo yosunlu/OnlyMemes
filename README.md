@@ -42,13 +42,15 @@ I (kind of) built my own server, and dealt with uploading and watching the video
 - Video-processing service is containerized, image of which pushed to Google Artifacts, and running on Cloud Run  
 - There are two buckets on Google Buckets, raw and processed video
 - When a video is uploaded (will talk in detail below), it is being uploaded to the raw bucket
-- When the video is "finalized" in the raw bucket, a notification will be created by Pub/Sub (/index.ts) will be sent, set by the following CLI 
+- When the video is "finalized" in the raw bucket, a notification will be created by Pub/Sub (/index.ts), set by the following CLI 
 `gsutil notification create -t video-uploads-topic -f json -e OBJECT_FINALIZE gs://memes-only-raw-videos`
 - The notificaiton will be sent to Video-processing service hosted on Cloud Run; once the video is downloaded and processed (in my case, being converted to 360p, at /index.ts and /storage.ts ) locally , it will be uploaded to the processed-video bucket
 
 **
 **APIs**
-
+- generateUpdateUrl(): this is deployed at Firebase (which connects to Cloud Run) with: `firebase deploy --only functions:generateUploadUrl`
+- When a video is uploaded, the frontend will call this function (/onlymemes-api/service/function.ts), and generate an authenticated URL (permission of access to the bucket for this function needs to be granted)
+- 
 
 ### Video Storage (Cloud Storage)
 Google Cloud Storage will be used to host the raw and processed videos. This is a simple, scalable, and cost effective solution for storing and serving large files.
